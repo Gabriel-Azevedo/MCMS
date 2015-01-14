@@ -11,7 +11,6 @@
 @interface RootViewController : UIViewController
 
 @property NSMutableArray *creatures;
-@property NSMutableArray *creaturesDetails;
 
 @end
 

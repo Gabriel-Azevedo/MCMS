@@ -25,10 +25,15 @@
 {
     [super viewDidLoad];
     MagicalCreature *creature1 = [[MagicalCreature alloc] initWithName:@"Cuca" :@"Crocodile Woman"];
-    MagicalCreature *creature2 = [[MagicalCreature alloc] initWithName:@"Caipora" :@"Protector of the Woods"];
+    MagicalCreature *creature2 = [[MagicalCreature alloc] initWithName:@"Curupira" :@"Protector of the Woods"];
     MagicalCreature *creature3 = [[MagicalCreature alloc] initWithName:@"Saci Perere" :@"Panky One-Legged Kid"];
 
     self.creatures = [[NSMutableArray alloc] initWithObjects:creature1, creature2, creature3, nil];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

@@ -91,11 +91,11 @@
 				23803DF61A65CACB007CD290 /* AppDelegate.m */,
 				23803DF81A65CACB007CD290 /* RootViewController.h */,
 				23803DF91A65CACB007CD290 /* RootViewController.m */,
-				23803DFB1A65CACB007CD290 /* Main.storyboard */,
 				23803E1A1A65DE8D007CD290 /* CreatureViewController.h */,
 				23803E1B1A65DE8D007CD290 /* CreatureViewController.m */,
 				23803E171A65CAFA007CD290 /* MagicalCreature.h */,
 				23803E181A65CAFA007CD290 /* MagicalCreature.m */,
+				23803DFB1A65CACB007CD290 /* Main.storyboard */,
 				23803DFE1A65CACB007CD290 /* Images.xcassets */,
 				23803E001A65CACB007CD290 /* LaunchScreen.xib */,
 				23803DF11A65CACB007CD290 /* Supporting Files */,
@@ -424,6 +424,7 @@
 				23803E131A65CACB007CD290 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23803E141A65CACB007CD290 /* Build configuration list for PBXNativeTarget "MCMSTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +433,7 @@
 				23803E161A65CACB007CD290 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

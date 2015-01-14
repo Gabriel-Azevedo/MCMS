@@ -12,6 +12,7 @@
 
 @property NSString *name;
 @property NSString *detail;
+@property NSMutableArray *creatureAccessories;
 
 -(instancetype)initWithName:(NSString *)name :(NSString *)detail;
 
