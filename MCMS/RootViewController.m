@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "MagicalCreature.h"
 #import "CreatureViewController.h"
+#import "BattleViewController.h"
 
 @interface RootViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -26,7 +27,7 @@
     [super viewDidLoad];
     MagicalCreature *creature1 = [[MagicalCreature alloc] initWithName:@"Cuca" :@"Crocodile Woman"];
     MagicalCreature *creature2 = [[MagicalCreature alloc] initWithName:@"Curupira" :@"Protector of the Woods"];
-    MagicalCreature *creature3 = [[MagicalCreature alloc] initWithName:@"Saci Perere" :@"Panky One-Legged Kid"];
+    MagicalCreature *creature3 = [[MagicalCreature alloc] initWithName:@"Saci Perere" :@"Prankster One-Legged Kid"];
 
     self.creatures = [[NSMutableArray alloc] initWithObjects:creature1, creature2, creature3, nil];
 }
@@ -48,6 +49,7 @@
     MagicalCreature *creature = [self.creatures objectAtIndex:indexPath.row];
     cell.textLabel.text = creature.name;
     cell.detailTextLabel.text = creature.detail;
+    NSLog(@"%@",creature.creatureAccessories);
     return cell;
 }
 
@@ -63,11 +65,13 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if ([segue.identifier isEqualToString:@"ShowCreatureSegue"])
+    {
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
     CreatureViewController *creatureVC = segue.destinationViewController;
     creatureVC.creature = [self.creatures objectAtIndex:path.row];
+    }
 }
-
 
 
 

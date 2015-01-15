@@ -16,6 +16,7 @@
 		23803E0E1A65CACB007CD290 /* MCMSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23803E0D1A65CACB007CD290 /* MCMSTests.m */; };
 		23803E191A65CAFA007CD290 /* MagicalCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 23803E181A65CAFA007CD290 /* MagicalCreature.m */; };
 		23803E1C1A65DE8D007CD290 /* CreatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23803E1B1A65DE8D007CD290 /* CreatureViewController.m */; };
+		238BD0361A6705C70055F305 /* BattleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 238BD0351A6705C70055F305 /* BattleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		23803E181A65CAFA007CD290 /* MagicalCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalCreature.m; sourceTree = "<group>"; };
 		23803E1A1A65DE8D007CD290 /* CreatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatureViewController.h; sourceTree = "<group>"; };
 		23803E1B1A65DE8D007CD290 /* CreatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatureViewController.m; sourceTree = "<group>"; };
+		238BD0341A6705C70055F305 /* BattleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleViewController.h; sourceTree = "<group>"; };
+		238BD0351A6705C70055F305 /* BattleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BattleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				23803DF91A65CACB007CD290 /* RootViewController.m */,
 				23803E1A1A65DE8D007CD290 /* CreatureViewController.h */,
 				23803E1B1A65DE8D007CD290 /* CreatureViewController.m */,
+				238BD0341A6705C70055F305 /* BattleViewController.h */,
+				238BD0351A6705C70055F305 /* BattleViewController.m */,
 				23803E171A65CAFA007CD290 /* MagicalCreature.h */,
 				23803E181A65CAFA007CD290 /* MagicalCreature.m */,
 				23803DFB1A65CACB007CD290 /* Main.storyboard */,
@@ -231,6 +236,7 @@
 			files = (
 				23803DFA1A65CACB007CD290 /* RootViewController.m in Sources */,
 				23803E191A65CAFA007CD290 /* MagicalCreature.m in Sources */,
+				238BD0361A6705C70055F305 /* BattleViewController.m in Sources */,
 				23803DF71A65CACB007CD290 /* AppDelegate.m in Sources */,
 				23803E1C1A65DE8D007CD290 /* CreatureViewController.m in Sources */,
 				23803DF41A65CACB007CD290 /* main.m in Sources */,

@@ -52,38 +52,12 @@
     self.creature.creatureAccessories = [NSMutableArray new];
 }
 
-/*- (void)viewWillAppear:(BOOL)animated
-{
-    NSLog(@"running viewWIllAppear for TripsTable");
-
-    //Getting indexpath for highlighened cell, to rehighlight
-    NSIndexPath *selectedIndex = [self.tableView indexPathForSelectedRow];
-
-    //Refreshing Table - Implement an if statement on the condition that the data has     changed
-    [self viewDidLoad];
-    [self.tableView reloadData];
-
-    //Re select cell
-    for (NSString *string in self.creature.creatureAccessories)
-    {
-        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:selectedIndex];
-        if ([string isEqualToString:cell.detailTextLabel.text])
-        {
-            [self.tableView selectRowAtIndexPath:selectedIndex animated:NO scrollPosition:UITableViewScrollPositionNone];
-        }
-    }
-    [super viewWillAppear:animated];
-}*/
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AcCell"];
-    cell.textLabel.text = [self.accessories objectAtIndex:indexPath.row];
-    if (cell.accessoryType == UITableViewCellAccessoryCheckmark)
-    {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-    else
+    NSString *accessory = [self.accessories objectAtIndex:indexPath.row];
+    cell.textLabel.text = accessory;
+    if ([self.creature.creatureAccessories containsObject:accessory])
     {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }

@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Monster Battles-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="RootViewController" sceneMemberID="viewController">
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Erz-z2-Lap">
-                                    <rect key="frame" x="0.0" y="64" width="320" height="94"/>
+                                    <rect key="frame" x="0.0" y="64" width="320" height="88"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <prototypes>
@@ -84,7 +84,14 @@
                             <constraint firstItem="zrO-XT-4JW" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="lKB-3W-gc4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6hs-5B-cTx"/>
+                    <navigationItem key="navigationItem" title="Monster Battles" id="6hs-5B-cTx">
+                        <barButtonItem key="rightBarButtonItem" title="BATTLE!" id="lea-aC-dqO">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="e81-yy-QtG" kind="push" identifier="Battle" id="cPh-5k-qi0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="zrO-XT-4JW" id="n9f-qt-uj6"/>
                         <outlet property="textField1" destination="rTk-IT-yQO" id="6eF-wD-stB"/>
@@ -94,6 +101,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713" y="328"/>
+        </scene>
+        <!--Battle View Controller-->
+        <scene sceneID="BAk-b3-4Sl">
+            <objects>
+                <viewController id="e81-yy-QtG" customClass="BattleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="prR-J2-8fk"/>
+                        <viewControllerLayoutGuide type="bottom" id="aUL-l0-s1v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3pR-mv-Isj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pd-2X-0Mj">
+                                <rect key="frame" x="274" y="28" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PGa-EG-gZX">
+                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WINNER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cc6-Vg-o7z">
+                                <rect key="frame" x="113" y="102" width="95" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="v1W-6H-CNM"/>
+                    <connections>
+                        <outlet property="imageView" destination="PGa-EG-gZX" id="PFB-tA-yAq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="obe-iV-PAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="986"/>
         </scene>
         <!--Creature View Controller-->
         <scene sceneID="rIn-eO-11v">
